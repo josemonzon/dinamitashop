@@ -1,6 +1,7 @@
 .card {
     margin-top: 1rem;
 }
+<<<<<<< HEAD
 .registroo{
     overflow: hidden;
    
@@ -23,4 +24,8 @@
 }
 .botoness{
     margin-top: 20px;
+}
+h4, h5 {
+    font-family: 'Alata', sans-serif;
+>>>>>>> d41788f63fd4e993128a56afbaeefd5a208dfe3c
 }
