@@ -4,28 +4,48 @@
 <<<<<<< HEAD
 .registroo{
     overflow: hidden;
-   
 }
 .cuentaa{
-    float: left;
     margin-top: 20px;
 }
 .formularioo{
-    float: left;
+    margin: 0 auto;
 }
 .formulario-login{
     float: center;
+    margin-top: 20px;
 }
 .loginn{
     float: center;
+    margin: 0 auto;
 }
-.contenedor.login{
+.contenedor-login{
+    background: #18BC9C;
     overflow: hidden;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    
 }
 .botoness{
+    margin: 0 auto;
     margin-top: 20px;
 }
 h4, h5 {
     font-family: 'Alata', sans-serif;
 >>>>>>> d41788f63fd4e993128a56afbaeefd5a208dfe3c
+}
+.todo{
+    padding: 150px;
+    margin: 0 auto;
+}
+.usuario-email{
+    margin: 0 auto;
+}
+.datos{
+    margin: 0 auto;
+
+}
+.btn.btn-link{
+    color: black;
 }
