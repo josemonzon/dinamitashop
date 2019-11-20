@@ -1,3 +1,6 @@
+body {
+    font-family: 'Lora', serif;
+}
 .card {
     margin-top: 1rem;
 }
@@ -8,7 +11,7 @@ h5 {
 }
 
 nav {
-    transition: 0.5s all;
+    transition: 0.3s all;
 }
 
 .pHBlanco::placeholder {
@@ -26,6 +29,9 @@ nav {
 }
 .margenContainer {
     margin-top: -7rem;
+}
+.margenContacto {
+    margin-top: 5rem;
 }
 @media (max-width: 992px) {
     #carouselExampleControls {
