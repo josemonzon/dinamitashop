@@ -1,6 +1,37 @@
 .card {
     margin-top: 1rem;
 }
-h4, h5 {
+
+h4,
+h5 {
     font-family: 'Alata', sans-serif;
+}
+
+nav {
+    transition: 0.5s all;
+}
+
+.pHBlanco::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white !important;
+    opacity: 1;
+    /* Firefox */
+}
+
+.pHGris::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: gray !important;
+    opacity: 1;
+    /* Firefox */
+}
+.margenContainer {
+    margin-top: -7rem;
+}
+@media (max-width: 992px) {
+    #carouselExampleControls {
+        display: none;
+    }
+    .margenContainer {
+        margin-top: 3rem;
+    }
 }
