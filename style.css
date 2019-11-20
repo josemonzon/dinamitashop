@@ -1,3 +1,6 @@
 .card {
     margin-top: 1rem;
 }
+h4, h5 {
+    font-family: 'Alata', sans-serif;
+}
