@@ -1,3 +1,26 @@
 .card {
     margin-top: 1rem;
 }
+.registroo{
+    overflow: hidden;
+   
+}
+.cuentaa{
+    float: left;
+    margin-top: 20px;
+}
+.formularioo{
+    float: left;
+}
+.formulario-login{
+    float: center;
+}
+.loginn{
+    float: center;
+}
+.contenedor.login{
+    overflow: hidden;
+}
+.botoness{
+    margin-top: 20px;
+}
