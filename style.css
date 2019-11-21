@@ -29,6 +29,7 @@ body {
     width: 50%;
     margin: 0 auto;
     margin-top: 20px;
+    font-family: 'Alata', sans-serif;
     
 }
 .botoness{
@@ -42,12 +43,14 @@ h4, h5 {
 .todo{
     padding: 150px;
     margin: 0 auto;
+    font-family: 'Alata', sans-serif;
 }
 .usuario-email{
     margin: 0 auto;
 }
 .datos{
     margin: 0 auto;
+    font-family: 'Alata', sans-serif;
 
 }
 .btn.btn-link{
@@ -69,6 +72,9 @@ nav {
     color: white !important;
     opacity: 1;
     /* Firefox */
+}
+.header {
+    font-family: 'Alata', sans-serif;
 }
 
 .pHGris::placeholder {
