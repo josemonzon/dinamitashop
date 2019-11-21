@@ -1,6 +1,62 @@
+body {
+    font-family: 'Lora', serif;
+}
 .card {
     margin-top: 1rem;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+.registroo{
+    overflow: hidden;
+}
+.cuentaa{
+    margin-top: 20px;
+}
+.formularioo{
+    margin: 0 auto;
+}
+.formulario-login{
+    float: center;
+    margin-top: 20px;
+}
+.loginn{
+    float: center;
+    margin: 0 auto;
+}
+.contenedor-login{
+    background: #18BC9C;
+    overflow: hidden;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-family: 'Alata', sans-serif;
+    
+}
+.botoness{
+    margin: 0 auto;
+    margin-top: 20px;
+}
+h4, h5 {
+    font-family: 'Alata', sans-serif;
+>>>>>>> d41788f63fd4e993128a56afbaeefd5a208dfe3c
+}
+.todo{
+    padding: 150px;
+    margin: 0 auto;
+    font-family: 'Alata', sans-serif;
+}
+.usuario-email{
+    margin: 0 auto;
+}
+.datos{
+    margin: 0 auto;
+    font-family: 'Alata', sans-serif;
+
+}
+.btn.btn-link{
+    color: black;
+}
+=======
 
 h4,
 h5 {
@@ -8,7 +64,7 @@ h5 {
 }
 
 nav {
-    transition: 0.5s all;
+    transition: 0.3s all;
 }
 
 .pHBlanco::placeholder {
@@ -16,6 +72,9 @@ nav {
     color: white !important;
     opacity: 1;
     /* Firefox */
+}
+.header {
+    font-family: 'Alata', sans-serif;
 }
 
 .pHGris::placeholder {
@@ -27,6 +86,9 @@ nav {
 .margenContainer {
     margin-top: -7rem;
 }
+.margenContacto {
+    margin-top: 5rem;
+}
 @media (max-width: 992px) {
     #carouselExampleControls {
         display: none;
@@ -35,3 +97,4 @@ nav {
         margin-top: 3rem;
     }
 }
+>>>>>>> c605647ccc77b768302d29a389d4c3c7a42a29a1

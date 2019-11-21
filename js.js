@@ -1,6 +1,15 @@
 $(function () {
     verificar();
     $(window).on('resize', function () {
+        
+        verificar();
+    });
+
+    $(window).scroll(function () {
+        verificar();
+    });
+
+    function verificar() {
         if ($(window).width() <= 992) {
             $("nav").addClass("bg-light");
             $("nav").addClass("navbar-light");
@@ -20,14 +29,6 @@ $(function () {
 
             $("#buscarInput").addClass("btn btn-outline-light");
         }
-        verificar();
-    });
-
-    $(window).scroll(function () {
-        verificar();
-    });
-
-    function verificar() {
         if ($(window).width() >= 992) {
             if ($(this).scrollTop() > 50) {
                 $("nav").addClass("bg-light");
