@@ -28,7 +28,7 @@ body {
     overflow: hidden;
     width: 50%;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 120px;
     font-family: 'Alata', sans-serif;
     
 }
@@ -47,6 +47,10 @@ h4, h5 {
 }
 .usuario-email{
     margin: 0 auto;
+}
+.foot{
+    margin-top: 121px;
+
 }
 .datos{
     margin: 0 auto;
