@@ -10,98 +10,102 @@
     <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <nav class="fixed-top navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" style="font-family: 'Alata', sans-serif;" href="#">
-              <img class="my-2" src="./img/logop.png" width="30" height="30" alt="">
-              DINAMITA</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav mr-auto">
+        <a class="navbar-brand" style="font-family: 'Alata', sans-serif;" href="#">
+            <img class="my-2" src="./img/logop.png" width="30" height="30" alt="">
+            DINAMITA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav mr-auto">
                 <a class="nav-item nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link active" href="faq.html">FAQ</a>
+                <a class="nav-item nav-link" href="faq.html">FAQ</a>
                 <a class="nav-item nav-link" href="registro.html">Registro</a>
                 <a class="nav-item nav-link" href="login.html">Login</a>
                 <a class="nav-item nav-link" href="contacto.html">Contacto</a>
-                <a class="nav-item nav-link" href="perfil.html">Perfil</a>
-              </div>
-              <form class="form-inline my-2 my-lg-0">
-                <input id="buscarInput" class="input-group-text mr-sm-2 text-left" style="background-color: white" type="search"
-                  placeholder="Buscar productos..." aria-label="Search">
-                <button id="buscarBoton" class="btn btn-outline-dark my-2 my-sm-0" type="submit">Buscar</button>
-              </form>
+                <a class="nav-item nav-link active" href="perfil.html">Perfil</a>
             </div>
-          </nav>
+            <form class="form-inline my-2 my-lg-0">
+                <input id="buscarInput" class="input-group-text mr-sm-2 text-left" style="background-color: white"
+                    type="search" placeholder="Buscar productos..." aria-label="Search">
+                <button id="buscarBoton" class="btn btn-outline-dark my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
     <div class="container" style="top: 50px; margin-top: 90px;">
-            <div class="row col-12 bg-light">
-                <div class="col-lg-8 order-lg-2">
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a href="" data-target="#profile" data-toggle="tab" class="nav-link active">Perfil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" data-target="#carrito" data-toggle="tab" class="nav-link">Carrito</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" data-target="#edit" data-toggle="tab" class="nav-link">Editar Perfil</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content py-4">
-                        <div class="tab-pane active" id="profile">
-                            <h5 class="mb-3">Perfil</h5>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h6>Nombre</h6>
-                                    <p>
-                                        Santi
-                                    </p>
-                                    <h6>Apellido</h6>
-                                    <p>
-                                        Argilla
-                                    </p>
-                                </div>
-                                <div class="col-md-12">
-                                    <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span>Últimas compras</h5>
-                                    <table class="table table-sm table-hover table-striped">
-                                        <tbody>                                    
-                                            <tr>
-                                                <td>
-                                                    <strong>Vans</strong>Zapatillas super flamas<strong>$ 2.400</strong>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <strong>Vans</strong>Zapatillas super flamas<strong>$ 2.400</strong>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <strong>Vans</strong>Zapatillas super flamas<strong>$ 2.400</strong>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                    </table>
-                                </div>
+        <div class="row col-12 bg-light">
+            <div class="col-lg-8 order-lg-2">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a href="" data-target="#profile" data-toggle="tab" class="nav-link active">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" data-target="#carrito" data-toggle="tab" class="nav-link">Carrito</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" data-target="#edit" data-toggle="tab" class="nav-link">Editar Perfil</a>
+                    </li>
+                </ul>
+                <div class="tab-content py-4">
+                    <div class="tab-pane active" id="profile">
+                        <h5 class="mb-3">Perfil</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Nombre</h6>
+                                <p>
+                                    Santi
+                                </p>
+                                <h6>Apellido</h6>
+                                <p>
+                                    Argilla
+                                </p>
                             </div>
-                            <!--/row-->
+                            <div class="col-md-12">
+                                <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span>Últimas
+                                    compras</h5>
+                                <table class="table table-sm table-hover table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <strong>Vans</strong>Zapatillas super flamas<strong>$ 2.400</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>Vans</strong>Zapatillas super flamas<strong>$ 2.400</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>Vans</strong>Zapatillas super flamas<strong>$ 2.400</strong>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                        
+                        <!--/row-->
                     </div>
+
                 </div>
-                <div class="col-lg-4 order-lg-1 text-center">
-                    <img src="https://media.licdn.com/dms/image/C4E03AQGTsY_h6x_OUg/profile-displayphoto-shrink_800_800/0?e=1579737600&v=beta&t=lp1VXIvrMIUWNv5C3bLsVvHJ-zm1jeiNlqSQj4ZE_Ok" style="border-radius: 50%; width: 150px; height: 150px;"class="mx-auto img-fluid img-circle d-block" alt="avatar">
-                    <label class="custom-file">
-                        <input type="file" id="file" class="custom-file-input">
-                        <button class="btn"><span class="custom-file-control">Elegir foto</span></button>
-                    </label>
-                </div>
+            </div>
+            <div class="col-lg-4 order-lg-1 text-center">
+                <img src="https://media.licdn.com/dms/image/C4E03AQGTsY_h6x_OUg/profile-displayphoto-shrink_800_800/0?e=1579737600&v=beta&t=lp1VXIvrMIUWNv5C3bLsVvHJ-zm1jeiNlqSQj4ZE_Ok"
+                    style="border-radius: 50%; width: 150px; height: 150px;"
+                    class="mx-auto img-fluid img-circle d-block" alt="avatar">
+                <label class="custom-file">
+                    <input type="file" id="file" class="custom-file-input">
+                    <button class="btn"><span class="custom-file-control">Elegir foto</span></button>
+                </label>
             </div>
         </div>
+    </div>
 
 
     <script src="js.js"></script>
