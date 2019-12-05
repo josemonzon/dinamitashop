@@ -15,8 +15,8 @@ $(function () {
             $("nav").addClass("navbar-light");
             $("nav").removeClass("navbar-dark");
 
-            $("#buscarBoton").addClass("btn-outline-dark");
-            $("#buscarBoton").removeClass("btn-outline-light");
+            $("button").addClass("btn-outline-dark");
+            $("button").removeClass("btn-outline-light");
 
             $("#buscarInput").removeClass("btn btn-outline-light");
         } else {
@@ -24,8 +24,8 @@ $(function () {
             $("nav").removeClass("bg-light");
             $("nav").removeClass("navbar-light");
 
-            $("#buscarBoton").removeClass("btn-outline-dark");
-            $("#buscarBoton").addClass("btn-outline-light");
+            $("button").removeClass("btn-outline-dark");
+            $("button").addClass("btn-outline-light");
 
             $("#buscarInput").addClass("btn btn-outline-light");
         }
@@ -35,8 +35,8 @@ $(function () {
                 $("nav").addClass("navbar-light");
                 $("nav").removeClass("navbar-dark");
 
-                $("#buscarBoton").addClass("btn-outline-dark");
-                $("#buscarBoton").removeClass("btn-outline-light");
+                $("button").addClass("btn-outline-dark");
+                $("button").removeClass("btn-outline-light");
 
                 $("#buscarInput").removeClass("btn btn-outline-light");
 
@@ -46,8 +46,8 @@ $(function () {
                 $("nav").removeClass("bg-light");
                 $("nav").removeClass("navbar-light");
 
-                $("#buscarBoton").removeClass("btn-outline-dark");
-                $("#buscarBoton").addClass("btn-outline-light");
+                $("button").removeClass("btn-outline-dark");
+                $("button").addClass("btn-outline-light");
 
                 $("#buscarInput").addClass("btn btn-outline-light");
 
