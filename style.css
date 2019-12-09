@@ -94,6 +94,7 @@ nav {
 .margenContacto {
     margin-top: 5rem;
 }
+
 @media (max-width: 992px) {
     #carouselExampleControls {
         display: none;
