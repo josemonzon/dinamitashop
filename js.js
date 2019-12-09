@@ -1,4 +1,10 @@
+$(document).ready(function () {
+    var stepper = new Stepper($('.bs-stepper')[3])
+  })
+
+
 $(function () {
+
     verificar();
     $(window).on('resize', function () {
         
@@ -52,6 +58,7 @@ $(function () {
                 $("#buscarInput").addClass("btn btn-outline-light");
 
             }
+        
 
         }
     }
