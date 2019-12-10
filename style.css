@@ -1,12 +1,9 @@
 body {
     font-family: 'Lora', serif;
-    background-color: #666;
 }
 .card {
     margin-top: 1rem;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 .registroo{
     overflow: hidden;
 }
@@ -39,7 +36,6 @@ body {
 }
 h4, h5 {
     font-family: 'Alata', sans-serif;
->>>>>>> d41788f63fd4e993128a56afbaeefd5a208dfe3c
 }
 .todo{
     padding: 150px;
@@ -61,7 +57,6 @@ h4, h5 {
 .btn.btn-link{
     color: black;
 }
-=======
 
 h4,
 h5 {
@@ -103,4 +98,3 @@ nav {
         margin-top: 3rem;
     }
 }
->>>>>>> c605647ccc77b768302d29a389d4c3c7a42a29a1

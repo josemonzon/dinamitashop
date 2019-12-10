@@ -25,13 +25,16 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav mr-auto">
         <a class="nav-item nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link active" href="faq.html">FAQ</a>
+        <a class="nav-item nav-link" href="faq.html">FAQ</a>
         <a class="nav-item nav-link" href="registro.html">Registro</a>
         <a class="nav-item nav-link" href="login.html">Login</a>
         <a class="nav-item nav-link" href="contacto.html">Contacto</a>
         <a class="nav-item nav-link" href="perfil.html">Perfil</a>
       </div>
       <form class="form-inline my-2 my-lg-0">
+        <a href="carrito.php"><button type="button" class="btn btn-outline-dark mr-sm-2">
+            <ion-icon id="cart" class="mt-1" name="cart"></ion-icon>
+          </button></a>
         <input id="buscarInput" class="input-group-text mr-sm-2 text-left" style="background-color: white" type="search" placeholder="Buscar productos..." aria-label="Search">
         <button id="buscarBoton" class="btn btn-outline-dark my-2 my-sm-0" type="submit">Buscar</button>
       </form>
@@ -71,8 +74,10 @@
             <button type="button" class="btn btn-outline-dark btn-block mt-3">Añadir al carrito</button>
           </div>
           <div class="col-12">
-            
-            <button type="button" class="btn btn-outline-dark btn-block mt-3"><ion-icon name="heart"></ion-icon> Añadir a favoritos</button>
+
+            <button type="button" class="btn btn-outline-dark btn-block mt-3">
+              <ion-icon name="heart"></ion-icon> Añadir a favoritos
+            </button>
           </div>
         </div>
       </div>
