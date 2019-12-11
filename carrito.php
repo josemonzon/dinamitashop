@@ -100,7 +100,7 @@
             </div>
           </th>
           <td>99 USD</td>
-          <td>1</td>
+          <td><input type="number"></td>
           <td>
           <a href="editar.html">Editar</a>
           <br>

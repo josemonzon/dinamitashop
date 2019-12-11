@@ -1,3 +1,11 @@
+<?php
+echo "<br><br><br><br><br>";
+print_r($_POST);
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,8 +17,7 @@
   <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
@@ -22,8 +29,7 @@
       <a class="navbar-brand" style="font-family: 'Alata', sans-serif;" href="index.html">
         <img class="my-2" src="./img/logop.png" width="30" height="30" alt="">
         DINAMITA</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -39,8 +45,7 @@
           <a href="carrito.php"><button type="button" class="btn btn-outline-dark mr-sm-2">
               <ion-icon id="cart" class="mt-1" name="cart"></ion-icon>
             </button></a>
-          <input id="buscarInput" class="input-group-text mr-sm-2 text-left" style="background-color: white"
-            type="search" placeholder="Buscar productos..." aria-label="Search">
+          <input id="buscarInput" class="input-group-text mr-sm-2 text-left" style="background-color: white" type="search" placeholder="Buscar productos..." aria-label="Search">
           <button id="buscarBoton" class="btn btn-outline-dark my-2 my-sm-0" type="submit">Buscar</button>
         </form>
       </div>
@@ -48,28 +53,26 @@
   </header>
   <div class="container margenContacto border rounded">
     <h5 class="my-3">Completá tus datos</h5>
-    <form>
-      <div class="formularioo">
-        <div class="form-row">
-          <div class="col-12 col-lg-6 mt-3">
-            <input type="text" class="form-control" placeholder="Nombre">
-          </div>
-          <div class="col-12 col-lg-6 mt-3">
-            <input type="text" class="form-control" placeholder="Apellido">
-          </div>
-          <div class="col-12 col-lg-6 mt-3">
-            <input type="email" class="form-control" placeholder="Email">
-          </div>
-          <div class="col-12 col-lg-6 mt-3">
-            <input type="password" class="form-control" placeholder="Contraseña">
-          </div>
-        </div>
+    <form action="registro.php" method="POST" class="my-3">
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
       </div>
+      <div class="form-group">
+        <label for="usuario">Usuario</label>
+        <input name="usuario" type="text" class="form-control" id="usuario" placeholder="Usuario" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input name="password" type="password" class="form-control" id="password" placeholder="Password" required>
+      </div>
+      <div class="form-group">
+        <label for="passwordConfirm">Repite la contraseña</label>
+        <input name="passwordConfirm" type="password" class="form-control" id="passwordConfirm" placeholder="Password" required>
+      </div>
+      <button type="submit" class="btn btn-outline-dark">Crear cuenta</button>
     </form>
-    <div class="cuentaa">
-      <a href="file:///C:/laragon/www/dinamitashop/registro.html"><button type="button"
-          class="btn btn-outline-dark mb-3">Crear cuenta</button></a>
-    </div>
+
 
     <body background="C:\laragon\www\dinamitashop\img\fondo.jpg">
   </div>
@@ -122,14 +125,11 @@
     </div>
   </footer>
   <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
   </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
 </body>
 
