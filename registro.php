@@ -36,7 +36,7 @@ print_r($_POST);
         <div class="navbar-nav mr-auto">
           <a class="nav-item nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="faq.html">FAQ</a>
-          <a class="nav-item nav-link active" href="registro.html">Registro</a>
+          <a class="nav-item nav-link active" href="registro.php">Registro</a>
           <a class="nav-item nav-link" href="login.html">Login</a>
           <a class="nav-item nav-link" href="contacto.html">Contacto</a>
           <a class="nav-item nav-link" href="perfil.html">Perfil</a>
@@ -112,11 +112,11 @@ print_r($_POST);
                 FAQ</a>
             </div>
             <div class="col-12">
-              <a class="navbar-brand text-secondary" style="font-family: 'Alata', sans-serif;" href="faq.html">
+              <a class="navbar-brand text-secondary" style="font-family: 'Alata', sans-serif;" href="registro.php">
                 Registro</a>
             </div>
             <div class="col-12">
-              <a class="navbar-brand text-secondary" style="font-family: 'Alata', sans-serif;" href="faq.html">
+              <a class="navbar-brand text-secondary" style="font-family: 'Alata', sans-serif;" href="login.html">
                 Login</a>
             </div>
           </div>
