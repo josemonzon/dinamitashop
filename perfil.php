@@ -1,18 +1,4 @@
-<?php
-session_start();
-if (isset($_SESSION['usuario'])) {
-    $usuario = $_SESSION['usuario'];
-} else {
-    header('Location: login.php');
-}
-if ($_POST) {
-    if ($_POST['salir'] == 'Salir') {
-        session_destroy();
-        setcookie('usuario','',-1);
-        header('Location: login.php');
-    }
-}
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,40 +62,14 @@ if ($_POST) {
                         <h5 class="mb-3">Perfil</h5>
                         <div class="row">
                             <div class="col-md-6">
-                            <?php if (isset($usuario)) : ?>
-        <div style="width: 400px; margin:0 auto;">
-            <h1>Perfil <span>
-                    <form action="miperfil.php" method="post"> <input type='submit' name='salir' value='Salir' /></form>
-                </span></h1>
-            <hr>
-            <form action="miperfil.php">
-                <fieldset>
-                    <legend>Editar mi perfil</legend>
-                    <div style='height:50px;'>
-                        <label for="name">Nombre: </label><br />
-                        <input type="text" name="name" value="<?php echo $usuario['name'] ?>">
-                    </div>
-                    <div style='height:50px;'>
-                        <label for="email">Email</label><br />
-                        <input type="email" name="email" value="<?php echo $usuario['email'] ?>">
-                    </div>
-                    <div style='height:50px;'>
-                        <label for="username">Username</label><br />
-                        <input type="text" name="username" value="<?php echo $usuario['username'] ?>">
-                    </div>
-                    <div style='height:50px;'>
-                        <label for="password">Password</label><br />
-                        <input type="password" name="password" value="">
-                    </div>
-                    <input type="submit" value="Guardar cambios">
-                </fieldset>
-            </form>
-        </div>
-    <?php else : ?>
-        <div>
-            <h1>Usuario desconocido</h1>
-        </div>
-    <?php endif; ?>
+                                <h6>Nombre</h6>
+                                <p>
+                                    Santi
+                                </p>
+                                <h6>Apellido</h6>
+                                <p>
+                                    Argilla
+                                </p>
                             </div>
                             <div class="col-md-12">
                                 <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span>Últimas

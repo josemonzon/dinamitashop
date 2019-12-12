@@ -18,7 +18,7 @@ if ($_POST) {
             if($_POST['recordarme'] == true){
                 setcookie('usuario',json_encode($usuario),time()+604800);
             }
-            header('Location: perfil.html');
+            header('Location: perfil.php');
         } else {
             $errores['password'] = 'La clave no es correcta';
         }
@@ -28,7 +28,7 @@ if ($_POST) {
         $_SESSION['usuario'] = json_decode($_COOKIE['usuario'],true);
     }
     if (isset($_SESSION['usuario'])) {
-        header('Location: perfil.html');
+        header('Location: perfil.php');
     }
 }
 ?>
