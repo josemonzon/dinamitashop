@@ -1,9 +1,16 @@
 <?php
-echo "<br><br><br><br><br>";
-print_r($_POST);
-
-
-
+if($_POST){
+  $db = file_get_contents("usuarios.json");
+  $usuarios = json_decode($db, true);
+ $usuarios[] = [
+     "email" =>$_POST["email"],
+     "usuario" =>$_POST["usuario"],
+     "password" =>password_hash ($_POST["password"], PASSWORD_DEFAULT),
+     "passwordConfirm" =>password_hash ($_POST["passwordConfirm"], PASSWORD_DEFAULT)
+ ];
+  $db = json_encode($usuarios);
+  file_put_contents('usuarios.json',$db);
+}
 ?>
 
 <!DOCTYPE html>
@@ -37,9 +44,9 @@ print_r($_POST);
           <a class="nav-item nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="faq.html">FAQ</a>
           <a class="nav-item nav-link active" href="registro.php">Registro</a>
-          <a class="nav-item nav-link" href="login.html">Login</a>
+          <a class="nav-item nav-link" href="login.php">Login</a>
           <a class="nav-item nav-link" href="contacto.html">Contacto</a>
-          <a class="nav-item nav-link" href="perfil.html">Perfil</a>
+          <a class="nav-item nav-link" href="perfil.php">Perfil</a>
         </div>
         <form class="form-inline my-2 my-lg-0">
           <a href="carrito.php"><button type="button" class="btn btn-outline-dark mr-sm-2">

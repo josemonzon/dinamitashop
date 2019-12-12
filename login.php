@@ -1,3 +1,37 @@
+<?php
+// Inicio sesión
+session_start();
+// Inicio errores
+$errores = [];
+$db = file_get_contents('usuarios.json');
+$usuarios = json_decode($db, true);
+if ($_POST) {
+    if (strlen($_POST['email']) < 3) {
+        $errores['email'] = 'Debe ingresar su Email';
+    }
+    $usuario = $usuarios[array_search($_POST['email'], array_column($usuarios, 'email'))];
+    if (!$usuario) {
+        $errores['email'] = 'El email no existe';
+    } else {
+        if (password_verify($_POST['password'], $usuario['password'])) {
+            $_SESSION['usuario'] = $usuario;
+            if($_POST['recordarme'] == true){
+                setcookie('usuario',json_encode($usuario),time()+604800);
+            }
+            header('Location: perfil.html');
+        } else {
+            $errores['password'] = 'La clave no es correcta';
+        }
+    }
+} else {
+    if(isset($_COOKIE['usuario'])){
+        $_SESSION['usuario'] = json_decode($_COOKIE['usuario'],true);
+    }
+    if (isset($_SESSION['usuario'])) {
+        header('Location: perfil.html');
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,9 +61,9 @@
                 <a class="nav-item nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href="faq.html">FAQ</a>
                 <a class="nav-item nav-link" href="registro.php">Registro</a>
-                <a class="nav-item nav-link active" href="login.html">Login</a>
+                <a class="nav-item nav-link active" href="login.php">Login</a>
                 <a class="nav-item nav-link" href="contacto.html">Contacto</a>
-                <a class="nav-item nav-link" href="perfil.html">Perfil</a>
+                <a class="nav-item nav-link" href="perfil.php">Perfil</a>
             </div>
             <form class="form-inline my-2 my-lg-0">
                 <input id="buscarInput" class="input-group-text mr-sm-2 text-left" style="background-color: white"
