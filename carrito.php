@@ -17,31 +17,7 @@
 </head>
 
 <body>
-  <nav class="fixed-top navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" style="font-family: 'Alata', sans-serif;" href="index.html">
-      <img class="my-2" src="./img/logop.png" width="30" height="30" alt="">
-      DINAMITA</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav mr-auto">
-        <a class="nav-item nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="faq.html">FAQ</a>
-        <a class="nav-item nav-link" href="registro.html">Registro</a>
-        <a class="nav-item nav-link" href="login.html">Login</a>
-        <a class="nav-item nav-link" href="contacto.html">Contacto</a>
-        <a class="nav-item nav-link" href="perfil.html">Perfil</a>
-      </div>
-      <form class="form-inline my-2 my-lg-0">
-        <a href="carrito.php"><button type="button" class="btn btn-outline-dark mr-sm-2">
-            <ion-icon id="cart" class="mt-1" name="cart"></ion-icon>
-          </button></a>
-        <input id="buscarInput" class="input-group-text mr-sm-2 text-left" style="background-color: white" type="search" placeholder="Buscar productos..." aria-label="Search">
-        <button id="buscarBoton" class="btn btn-outline-dark my-2 my-sm-0" type="submit">Buscar</button>
-      </form>
-    </div>
-  </nav>
+  <?php include("navbar.php") ?>
   <div class="border rounded container margenContacto">
     <!-- stepper -->
     <div class="bs-stepper">
@@ -75,44 +51,44 @@
       </div>
     </div>
 
-  <div class="table-responsive">
-  <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Producto</th>
-          <th scope="col">Precio</th>
-          <th scope="col">Cantidad</th>
-          <th scope="col">Opciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">
-            <div class="row">
-              <div class="col-12 col-lg-6">
-                <img style="max-width:200px" class="img-thumbnail" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" alt="" srcset="">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">
+              <div class="row">
+                <div class="col-12 col-lg-6">
+                  <img style="max-width:200px" class="img-thumbnail" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" alt="" srcset="">
+                </div>
+                <div class="col-12 col-lg-4">
+                  <h5>Zapatillas Vans</h5>
+                  <p class="text-muted my-0">Color: Negro</p>
+                  <p class="text-muted my-0">Talle: 42</p>
+                </div>
               </div>
-              <div class="col-12 col-lg-4">
-                <h5>Zapatillas Vans</h5>
-                <p class="text-muted my-0">Color: Negro</p>
-                <p class="text-muted my-0">Talle: 42</p>
-              </div>
-            </div>
-          </th>
-          <td>99 USD</td>
-          <td><input type="number"></td>
-          <td>
-          <a href="editar.html">Editar</a>
-          <br>
-          <a href="fav.html">Añadir a favoritos</a>
-          <br>
-          <a href="borrar.html">Borrar</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-    
+            </th>
+            <td>99 USD</td>
+            <td><input type="number"></td>
+            <td>
+              <a href="editar.html">Editar</a>
+              <br>
+              <a href="fav.html">Añadir a favoritos</a>
+              <br>
+              <a href="borrar.html">Borrar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
 
 
 
