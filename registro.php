@@ -30,7 +30,11 @@ if ($_POST) {
 
 </head>
 <header>
-  <?php include("navbar.php") ?>
+  <?php include("navbar.php");
+  if ($_SESSION["usuario"]) {
+    header('Location: index.php');
+  }
+  ?>
 </header>
 
 <body>

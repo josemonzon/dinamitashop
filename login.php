@@ -37,7 +37,11 @@ if ($_POST) {
     <link rel="stylesheet" href="style.css">
 </head>
 <header>
-    <?php include("navbar.php") ?>
+    <?php include("navbar.php");
+    if ($_SESSION["usuario"]) {
+        header('Location: index.php');
+    }
+    ?>
 </header>
 <!-- Modal -->
 <div class="modal" tabindex="-1" role="dialog">

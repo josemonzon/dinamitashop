@@ -13,10 +13,15 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 <script>
-  var pagActive = "perfil";
+    var pagActive = "perfil";
 </script>
+
 <body>
-    <?php include("navbar.php") ?>
+    <?php include("navbar.php");
+    if (!$_SESSION["usuario"]) {
+        header('Location: index.php');
+    }
+    ?>
     <div class="border rounded container margenContacto">
         <div class="row my-3">
             <div class="col-lg-8 order-lg-2">
@@ -83,7 +88,7 @@
             </div>
         </div>
 
-        
+
     </div>
 
 

@@ -51,12 +51,14 @@ if ($_GET) {
     $_SESSION["usuario"] = null;
   }
 }
-if ($_SESSION["usuario"]) {
-  echo "<script>window.addEventListener('load', function() {
-      $('#nav-perfil').removeClass('disabled');
-      $('#nav-login').addClass('disabled');
-      $('#nav-registro').addClass('disabled');
-    })</script>";
+if ($_SESSION) {
+  if ($_SESSION["usuario"]) {
+    echo "<script>window.addEventListener('load', function() {
+        $('#nav-perfil').removeClass('disabled');
+        $('#nav-login').addClass('disabled');
+        $('#nav-registro').addClass('disabled');
+      })</script>";
+  }
 }
 
 ?>
