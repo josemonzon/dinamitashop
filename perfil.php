@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
-
+<script>
+  var pagActive = "perfil";
+</script>
 <body>
     <?php include("navbar.php") ?>
     <div class="border rounded container margenContacto">
@@ -69,7 +71,7 @@
                         </div>
                         <!--/row-->
                     </div>
-
+                    <a href="index.php?cerrarSesion=true"><button type="button" class="btn btn-outline-dark mt-3">Cerrar sesion</button></a>
                 </div>
             </div>
             <div class="col-lg-4 order-lg-1 text-center">
@@ -80,6 +82,8 @@
                 </label>
             </div>
         </div>
+
+        
     </div>
 
 

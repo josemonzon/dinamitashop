@@ -1,8 +1,5 @@
 <?php
-// Inicio sesión
-session_start();
 // Inicio errores
-$errores = [];
 $db = file_get_contents('usuarios.json');
 $usuarios = json_decode($db, true);
 $errorAMostrar = "nada";
@@ -13,6 +10,8 @@ if ($_POST) {
     } else {
         $usuario = $usuarios[$index];
         if (password_verify($_POST['password'], $usuario['password'])) {
+            session_start();
+            $_SESSION["usuario"] = $usuario;
             header('Location: perfil.php');
         } else {
             $errores['password'] = 'La clave no es correcta';
@@ -22,6 +21,9 @@ if ($_POST) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<script>
+    var pagActive = "login";
+</script>
 
 <head>
     <meta charset="UTF-8">
@@ -59,25 +61,33 @@ if ($_POST) {
 <!-- Modal -->
 
 <body>
-    <div class="border rounded container margenContacto">
-        <form action="login.php" method="POST" class="my-3">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+    <div class="container margenContacto">
+        <div class="row">
+            <div class="offset-lg-4 border rounded col-12 col-lg-4">
+            <h5 class="my-3">Completá tus datos</h5>
+                <form action="login.php" method="POST" class="my-3">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input value="<?php if ($_POST && empty($errores['email'])) {
+                                            echo $_POST['email'];
+                                        } ?>" name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Recordar usuario</label>
+                    </div>
+                    <button type="submit" class="btn btn-outline-dark">Iniciar sesion</button>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-            </div>
-            <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Recordar usuario</label>
-            </div>
-            <button type="submit" class="btn btn-outline-dark">Iniciar sesion</button>
-        </form>
+        </div>
+
 
     </div>
-    <footer class="foot">
+    <footer class="py-3">
         <div style="background: rgb(31, 31, 31) none repeat scroll 0 0" class="container-fluid py-3">
             <div class="container">
                 <div class="row">
@@ -133,6 +143,7 @@ if ($_POST) {
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script>
         function mostrarModal(titulo, error) {
             $('.modal').on('show.bs.modal', function(event) {
@@ -144,11 +155,9 @@ if ($_POST) {
         }
     </script>
     <?php
-
     if (empty($errores["email"])) {
-        if (empty($errores["password"])) {
-            
-        } else {
+        if (empty($errores["password"])) { } else {
+
             $errorAMostrar = $errores["password"];
             echo '<script>mostrarModal("Error", "' . $errorAMostrar . '");</script>';
         }
@@ -156,8 +165,6 @@ if ($_POST) {
         $errorAMostrar = $errores["email"];
         echo '<script>mostrarModal("Error", "' . $errorAMostrar . '");</script>';
     }
-    
-
     ?>
 </body>
 

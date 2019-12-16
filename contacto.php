@@ -13,7 +13,9 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 </head>
-
+<script>
+  var pagActive = "contacto";
+</script>
 <body>
     <?php include("navbar.php") ?>
     <div class="container margenContacto border rounded">
@@ -32,7 +34,9 @@
                     <div class="row">
                         <div class="form-group col-md-12">
                             <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            <input value="<?php if($_SESSION["usuario"]){
+                                echo $_SESSION["usuario"]["email"];
+                                } ?>"type="email" class="form-control" id="inputEmail4" placeholder="Email">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputCity">Mensaje</label>
