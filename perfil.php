@@ -20,6 +20,8 @@
     <?php include("navbar.php");
     if (!$_SESSION["usuario"]) {
         header('Location: index.php');
+    } else {
+        $usuario=$_SESSION["usuario"];
     }
     ?>
     <div class="border rounded container margenContacto">
@@ -43,11 +45,16 @@
                             <div class="col-md-6">
                                 <h6>Nombre</h6>
                                 <p>
-                                    Santi
+                                
+                                    <?php 
+                                    echo $usuario["usuario"];
+                                    ?>
                                 </p>
-                                <h6>Apellido</h6>
+                                <h6>Email</h6>
                                 <p>
-                                    Argilla
+                                <?php 
+                                    echo $usuario["email"];
+                                    ?>
                                 </p>
                             </div>
                             <div class="col-md-12">

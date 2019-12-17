@@ -39,7 +39,7 @@ if ($_POST) {
 <header>
     <?php include("navbar.php");
     if ($_SESSION["usuario"]) {
-        header('Location: index.php');
+        header('Location: perfil.php');
     }
     ?>
 </header>
