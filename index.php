@@ -1,3 +1,10 @@
+<?php
+if(isset($_COOKIE["usuario"])){
+    session_start();
+    $_SESSION["usuario"] = json_decode($_COOKIE["usuario"], true);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

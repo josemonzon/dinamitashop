@@ -45,14 +45,15 @@
   })
 </script>
 <?php
-session_start();
 if ($_GET) {
   if ($_GET["cerrarSesion"] == true) {
-    $_SESSION["usuario"] = null;
+    session_destroy();
+    setcookie("usuario", null, -1);
+    header("Location: index.php");
   }
 }
-if ($_SESSION) {
-  if ($_SESSION["usuario"]) {
+if (isset ($_SESSION)) {
+  if (isset ($_SESSION["usuario"])) {
     echo "<script>window.addEventListener('load', function() {
         $('#nav-perfil').removeClass('disabled');
         $('#nav-login').addClass('disabled');

@@ -1,16 +1,26 @@
 <?php
+ session_start();
 // Inicio errores
 $db = file_get_contents('usuarios.json');
 $usuarios = json_decode($db, true);
 $errorAMostrar = "nada";
+
+if(isset($_COOKIE["usuario"])){
+    $_SESSION["usuario"] = json_decode($_COOKIE["usuario"], true);
+    header("location: index.php");
+}
+
 if ($_POST) {
+   // print_r(isset($_POST["recordar"]));exit;
     $index = array_search($_POST['email'], array_column($usuarios, 'email'));
     if (is_bool($index)) {
         $errores['email'] = "No existe el usuario";
     } else {
         $usuario = $usuarios[$index];
         if (password_verify($_POST['password'], $usuario['password'])) {
-            session_start();
+            if(isset($_POST["recordar"])){
+                setcookie("usuario", json_encode($usuario) , time()+3600);
+            }
             $_SESSION["usuario"] = $usuario;
             header('Location: perfil.php');
         } else {
@@ -18,6 +28,7 @@ if ($_POST) {
         }
     }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +49,7 @@ if ($_POST) {
 </head>
 <header>
     <?php include("navbar.php");
-    if ($_SESSION["usuario"]) {
+    if (isset($_SESSION["usuario"])) {
         header('Location: perfil.php');
     }
     ?>
@@ -81,10 +92,12 @@ if ($_POST) {
                         <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
                     </div>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input"  name="recordar">
                         <label class="form-check-label" for="exampleCheck1">Recordar usuario</label>
                     </div>
                     <button type="submit" class="btn btn-outline-dark">Iniciar sesion</button>
+                    <button type="button" class="btn btn-outline-dark"><a href="./registro.php">Registrarme</a></button>
+                    
                 </form>
             </div>
         </div>

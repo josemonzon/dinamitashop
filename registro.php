@@ -1,4 +1,5 @@
 <?php
+
 if ($_POST) {
   if ($_POST["password"] == $_POST["passwordConfirm"]) {
     $db = file_get_contents("usuarios.json");
@@ -46,7 +47,7 @@ if ($_POST) {
         <form action="registro.php" method="POST" class="my-3">
           <div class="form-group">
             <label for="email">Email address</label>
-            <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+            <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" value="" required>
           </div>
           <div class="form-group">
             <label for="usuario">Usuario</label>

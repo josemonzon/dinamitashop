@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(isset($_COOKIE["usuario"])){
+ 
+    $_SESSION["usuario"] = json_decode($_COOKIE["usuario"], true);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +26,7 @@
 
 <body>
     <?php include("navbar.php");
-    if (!$_SESSION["usuario"]) {
+    if (!isset($_SESSION["usuario"])) {
         header('Location: index.php');
     } else {
         $usuario=$_SESSION["usuario"];
