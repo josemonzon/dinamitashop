@@ -91,11 +91,11 @@ if(isset($_COOKIE["usuario"])){
                         </div>
                         <!--/row-->
                     </div>
-                    <a href="index.php?cerrarSesion=true"><button type="button" class="btn btn-outline-dark mt-3">Cerrar sesion</button></a>
+                    <a href="cerrar_session.php"><button type="button" class="btn btn-outline-dark mt-3">Cerrar sesion</button></a>
                 </div>
             </div>
             <div class="col-lg-4 order-lg-1 text-center">
-                <img src="https://media.licdn.com/dms/image/C4E03AQGTsY_h6x_OUg/profile-displayphoto-shrink_800_800/0?e=1579737600&v=beta&t=lp1VXIvrMIUWNv5C3bLsVvHJ-zm1jeiNlqSQj4ZE_Ok" style="border-radius: 50%; width: 150px; height: 150px;" class="mx-auto img-fluid img-circle d-block" alt="avatar">
+                <img src="img/perfil.jpg" style="border-radius: 50%; width: 150px; height: 150px;" class="mx-auto img-fluid img-circle d-block" alt="avatar">
                 <label class="custom-file">
                     <input type="file" id="file" class="custom-file-input">
                     <button class="btn"><span class="custom-file-control">Elegir foto</span></button>
