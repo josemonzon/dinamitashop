@@ -1,5 +1,4 @@
 <?php
-
 if ($_POST) {
   if ($_POST["password"] == $_POST["passwordConfirm"]) {
     $db = file_get_contents("usuarios.json");
@@ -9,9 +8,12 @@ if ($_POST) {
       "usuario" => $_POST["usuario"],
       "password" => password_hash($_POST["password"], PASSWORD_DEFAULT),
     ];
+    
     $db = json_encode($usuarios);
     file_put_contents('usuarios.json', $db);
-  } else { }
+    header("Location: login.php");
+  } else {
+  }
 }
 ?>
 <!DOCTYPE html>
@@ -31,11 +33,11 @@ if ($_POST) {
 
 </head>
 <header>
-  <?php include("navbar.php");
-  if ($_SESSION["usuario"]) {
-    header('Location: index.php');
-  }
-  ?>
+<?php include("navbar.php");
+    if (isset($_SESSION["usuario"])) {
+        header('Location: perfil.php');
+    }
+    ?>
 </header>
 
 <body>

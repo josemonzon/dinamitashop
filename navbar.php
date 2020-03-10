@@ -12,7 +12,7 @@
       <a id="nav-registro" class="nav-item nav-link" href="registro.php">Registro</a>
       <a id="nav-login" class="nav-item nav-link" href="login.php">Login</a>
       <a id="nav-contacto" class="nav-item nav-link" href="contacto.php">Contacto</a>
-      <a id="nav-perfil" class="nav-item nav-link disabled" href="perfil.php">Perfil</a>
+      <a id="nav-perfil" class="nav-item nav-link" href="perfil.php">Perfil</a>
     </div>
     <form class="form-inline my-2 my-lg-0">
       <a href="carrito.php"><button type="button" class="btn btn-outline-dark mr-sm-2">
